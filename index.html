@@ -15,7 +15,11 @@
       src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"
     ></script>
     <script src="./script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+      crossorigin="anonymous"
+    ></script>
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -40,10 +44,10 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Home</a>
+                <a class="nav-link" aria-current="page" href="#">Головна</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="#">Projects</a>
+                <a class="nav-link active" href="#">фільтр</a>
               </li>
             </ul>
           </div>
@@ -58,19 +62,25 @@
             <h1 class="title fw-bold mb-5">
               Завантаження зображення та застосування сірого фільтра
             </h1>
-            <canvas id="can" class="m-2 mb-5"></canvas>
-            <canvas id="can2" class="m-2 mb-5"></canvas>
-            <div class="form-div text-center">
+            <div class="row row-cols-1 row-cols-md-2">
+              <div class="col mb-5">
+                <canvas id="can" class=""></canvas>
+              </div>
+              <div class="col mb-5">
+                <canvas id="can2" class=""></canvas>
+              </div>
+            </div>
+            <div class="col text-left">
               <input
-              class="m-1"
-              type="file"
-              multiple="false"
-              accept="image/*"
-              id="finput"
-              value="Upload"
-              onchange="upload()"
+                class="m-1 mb-3"
+                type="file"
+                multiple="false"
+                accept="image/*"
+                id="finput"
+                value="Upload"
+                onchange="upload()"
               />
-              <button class=" m-1" onclick="makeGray()">Сірий фільтр</button>
+              <button class="m-1 btn-filter" onclick="makeGray()">Сірий фільтр</button>
             </div>
           </div>
         </div>
